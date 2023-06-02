@@ -29,7 +29,7 @@ extension PXTableView {
     func bindDataSource(numberOfSection: (() -> Int)? = nil,
                         numberOfRow: @escaping (Int) -> Int,
                         cellForIndexPath: @escaping (IndexPath) -> UITableViewCell) -> Self {
-        
+        self.dataSource = self
         if let numberOfSection = numberOfSection {
             self.numberOfSection = numberOfSection
         }
@@ -42,6 +42,7 @@ extension PXTableView {
     
     @discardableResult
     func bindDelegate(actionForIndexPath: @escaping (IndexPath) -> Void) -> Self {
+        self.delegate = self
         self.actionForIndexPath = actionForIndexPath
         
         return self

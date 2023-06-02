@@ -7,6 +7,19 @@
 
 import Foundation
 
+protocol PxUpdatable {
+    func update()
+}
+
 class PXViewModel {
     
+    private var updatableObjects: [PxUpdatable] = []
+    
+    func update() {
+        updatableObjects.forEach { $0.update() }
+    }
+    
+    func addUpdable(_ object: PxUpdatable) {
+        self.updatableObjects.append(object)
+    }
 }

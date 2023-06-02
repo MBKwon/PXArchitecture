@@ -10,12 +10,16 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: PXTableView!
+    
+    var viewModel: MainViewModel = MainViewModel() {
+        didSet {
+            viewModel.bindTableView(tableView).update()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        tableView.bindDataSource(numberOfRow: <#T##(Int) -> Int#>, cellForIndexPath: <#T##(IndexPath) -> UITableViewCell#>)
     }
 }
 

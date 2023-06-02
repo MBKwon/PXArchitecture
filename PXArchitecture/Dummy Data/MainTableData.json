@@ -1,0 +1,28 @@
+{
+    "list": [
+        {
+            "title": "PD-1",
+            "description": "Phalanx for all developers"
+        },   
+        {
+            "title": "PD-2",
+            "description": "Phalanx for all developers"
+        },   
+        {
+            "title": "PD-3",
+            "description": "Phalanx for all developers"
+        },   
+        {
+            "title": "PD-4",
+            "description": "Phalanx for all developers"
+        },   
+        {
+            "title": "PD-5",
+            "description": "Phalanx for all developers"
+        },   
+        {
+            "title": "PD-6",
+            "description": "Phalanx for all developers"
+        }
+    ]
+}
